@@ -168,6 +168,40 @@ h2 {
   color: var(--color-text-muted);
 }
 
+.unterseite-headerbild {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+}
+
+.unterseite-headerbild img {
+  height: 320px;
+  object-fit: cover;
+  border: 1px solid #dddddd;
+}
+
+.unterseite-inhalt {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.portrait-block {
+  margin-top: 2rem;
+  background-color: var(--color-surface);
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.portrait-block img {
+  width: 100%;
+  max-width: 600px;
+  height: 750px;
+  object-fit: cover;
+  border: 1px solid #dddddd;
+}
+
 @media (max-width: 800px) {
   .top-nav,
   .top-nav nav,
@@ -192,5 +226,21 @@ h2 {
   .karten-grid,
   .footer {
     grid-template-columns: 1fr;
+  }
+
+  .unterseite-headerbild {
+    padding: 0 1rem;
+  }
+
+  .unterseite-headerbild img {
+    height: 220px;
+  }
+
+  .unterseite-inhalt {
+    padding: 1.5rem 1rem;
+  }
+
+  .portrait-block img {
+    height: auto;
   }
 }
