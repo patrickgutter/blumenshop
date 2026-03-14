@@ -33,18 +33,20 @@
         <p>Ava Hailey Gretha<br>Hauptstrasse 100<br>4102 Binningen</p>
         <p><a href="mailto:welcome@avahaileygretha.ch">welcome@avahaileygretha.ch</a></p>
       </div>
+      <!-- Eingebettete Google-Map. 
+      Vorteil: Die Adresse ist direkt auf der Seite sichtbar und anklickbar. -->
       <iframe title="Google Map zu Ava Hailey Gretha"
         src="https://www.google.com/maps?q=Hauptstrasse+100+4102+Binningen&output=embed" width="100%" height="300"
-        style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+        style="border:0;" allowfullscreen>
       </iframe>
     </section>
 
     <section class="portrait-block">
       <div class="portrait-bio">
         <h2>Kontaktformular</h2>
-        <form action="https://formsubmit.co/37f99200642839e4bae21423fc772ce8" method="post">
-          <input type="hidden" name="_subject" value="Neue Nachricht von avahaileygretha.ch">
-          <input type="text" name="_honey" style="display:none">
+        <!-- Einfaches Formular mit HTML-Validierung. 
+        Vorteil: Pflichtfelder werden bereits im Browser geprüft dank des Attributs "required". -->
+        <form action="#" method="post">
           <p>
             <label for="name">Name</label><br>
             <input id="name" name="name" type="text" required>

@@ -1,5 +1,5 @@
 /* Wir verwenden CSS-Variablen. 
-Vorteil: Wenn wir die Farben ändern möchten, müssen wir das nur an einem Ort tun, hier bei den Variablen. */
+Vorteil: Wenn wir die Farben ändern möchten, müssen wir das nur an einem Ort tun, nämlich nur hier bei den Variablen. */
 :root {
   --color-primary: #5E8C61;
   --color-accent: #C27A7A;
@@ -128,6 +128,9 @@ h2 {
   background-color: var(--color-surface);
 }
 
+/* Mit display: grid; lassen sich Elemente einfach nebeneinander platzieren in einem Raster. 
+"1fr 1fr 1fr" bedeutet, dass der Raster drei Spalten hat und jede Spalte gleich gross ist.
+Wir verwenden diese Klasse auch für die Lightbox auf der Seite galerie.html.*/
 .karten-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -216,6 +219,43 @@ h2 {
   line-height: 1.5;
 }
 
+/* Lightbox fuer die Galerie. 
+Vorteil: Wir erhalten eine Grossansicht der Bilder ohne JavaScript, nur mit CSS. 
+"z-index: 1000;" Mit dem hohen Index 1000 wird das Bild in der Lightbox ganz sicher nicht von normalen Seitenelementen 
+überdeckt; je höher der Index, desto weiter oben liegt das Bild, also über allen anderen Elementen, die wahrscheinlich 
+einen tieferen Index oder keinen haben.
+"background: rgba(0, 0, 0, 0.9);" 
+dadurch wird der Seitenhintergrund stark abgedunkelt, sobald die Lightbox sichtbar ist.
+"inset: 0;"
+Die Lightbox spannt sich über den ganzen Bildschirm.
+So kann sie den Hintergrund abdunkeln und das Bild darüber anzeigen.
+*/
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border: 2px solid #ffffff;
+}
+
+/* Hier folgen die Regeln fuer kleinere Bildschirme, damit die Website responsiv ist. 
+Mit @media wird die Bildschirmgrösse abgefragt. Alle Regeln innerhalb von {...} gelten 
+nur für Bildschirme <801px */
 @media (max-width: 800px) {
   .top-nav,
   .top-nav nav,
