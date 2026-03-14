@@ -219,7 +219,7 @@ Wir verwenden diese Klasse auch für die Lightbox auf der Seite galerie.html.*/
   line-height: 1.5;
 }
 
-/* Lightbox fuer die Galerie. 
+/* Lightbox für die Galerie. 
 Vorteil: Wir erhalten eine Grossansicht der Bilder ohne JavaScript, nur mit CSS. 
 "z-index: 1000;" Mit dem hohen Index 1000 wird das Bild in der Lightbox ganz sicher nicht von normalen Seitenelementen 
 überdeckt; je höher der Index, desto weiter oben liegt das Bild, also über allen anderen Elementen, die wahrscheinlich 
@@ -253,7 +253,7 @@ So kann sie den Hintergrund abdunkeln und das Bild darüber anzeigen.
   border: 2px solid #ffffff;
 }
 
-/* Hier folgen die Regeln fuer kleinere Bildschirme, damit die Website responsiv ist. 
+/* Hier folgen die Regeln für kleinere Bildschirme, damit die Website responsiv ist. 
 Mit @media wird die Bildschirmgrösse abgefragt. Alle Regeln innerhalb von {...} gelten 
 nur für Bildschirme <801px */
 @media (max-width: 800px) {
@@ -280,6 +280,16 @@ nur für Bildschirme <801px */
   .karten-grid,
   .footer {
     grid-template-columns: 1fr;
+  }
+/* Für die Klassen .logo und .top-nav haben wir die Schrift vergrössert (font-size: 1.4rem;), damit man die 
+Navigationselemente mit dem Finger besser antippen kann. */
+  .logo {
+    padding: 0 0 0.8rem 0;
+    font-size: 1.4rem;
+  }
+
+  .top-nav nav {
+    font-size: 1.4rem;
   }
 
   .unterseite-headerbild {
