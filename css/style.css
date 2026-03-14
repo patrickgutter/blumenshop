@@ -194,12 +194,27 @@ h2 {
   padding: 1rem;
 }
 
-.portrait-block img {
+.portrait-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.portrait-bild {
   width: 100%;
-  max-width: 600px;
-  height: 750px;
-  object-fit: cover;
+  max-width: 300px;
+  margin-left: auto;
   border: 1px solid #dddddd;
+}
+
+.portrait-bio h3 {
+  margin-top: 0;
+}
+
+.portrait-bio p {
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
 @media (max-width: 800px) {
@@ -240,7 +255,11 @@ h2 {
     padding: 1.5rem 1rem;
   }
 
-  .portrait-block img {
+  .portrait-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-bild {
     height: auto;
   }
 }
